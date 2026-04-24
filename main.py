@@ -13,4 +13,4 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
-    return {"message": "Hackathon Backend is LIVE"}
+    return {"message": "AI Brain Initialized & Ready for Queries"}
