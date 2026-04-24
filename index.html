@@ -1,1 +1,23 @@
-fetch('https://hackthon-test.onrender.com/')
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notebook LLM Test</title>
+</head>
+<body>
+    <h1>Notebook LLM Test</h1>
+    <div id="data">Connecting to Render backend...</div>
+
+    <script>
+        // This script tells the "Face" to go get data from the "Brain"
+        fetch('https://hackthon-test.onrender.com/')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('data').innerText = data.message;
+            })
+            .catch(error => {
+                document.getElementById('data').innerText = "Error: Could not reach backend";
+                console.error('Error:', error);
+            });
+    </script>
+</body>
+</html>
